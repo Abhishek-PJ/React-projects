@@ -1,8 +1,8 @@
-function app(params) {
+function App(params) {
   return (
 
     <div>Hello Abhishek</div>
   )
 }
 
-export default app
+export default App
