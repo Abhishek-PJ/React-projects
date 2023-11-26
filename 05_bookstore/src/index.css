@@ -7,3 +7,39 @@
     background-color: cornsilk;
 
 }
+
+
+
+/* BookCategoryPage.css */
+
+.book-category-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .book-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(33.3333% - 20px);
+  
+    @media (max-width: 768px) {
+      flex: 1 0 calc(50% - 20px);
+    }
+  
+    @media (max-width: 480px) {
+      flex: 1 0 calc(100% - 20px);
+    }
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
