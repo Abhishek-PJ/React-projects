@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('Abhishek');
+  const [password, setPassword] = useState('4555');
   const navigate=useNavigate();
+     
 
   const handleLogin = () =>{
     if(username=="" || password==""){
@@ -16,6 +18,9 @@ const Login = () => {
   }
 
   return (
+    
+
+
     <div className="flex h-screen items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md w-96">
         <h2 className="text-2xl font-bold mb-6">Login</h2>
@@ -51,6 +56,8 @@ const Login = () => {
         </button>
       </div>
     </div>
+
+
   );
 };
 

@@ -8,8 +8,6 @@
 
 }
 
-
-
 /* BookCategoryPage.css */
 
 .book-category-page {
@@ -30,6 +28,12 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1 0 calc(33.3333% - 20px);
+
+    
+    h2 
+    {
+      margin-bottom: 10px;
+    }
   
     @media (max-width: 768px) {
       flex: 1 0 calc(50% - 20px);
@@ -39,7 +43,6 @@
       flex: 1 0 calc(100% - 20px);
     }
   
-    h2 {
-      margin-bottom: 10px;
-    }
+    
+
   }
