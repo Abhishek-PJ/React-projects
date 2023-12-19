@@ -1,5 +1,6 @@
-import { createContext } from "react";
+// Logincontext.js
+import { createContext } from 'react';
 
-const logincontext=createContext(null);
+const Logincontext = createContext({ setuser: () => {}, user: '' });
 
-export default logincontext;
+export default Logincontext;

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext }  from "react";
 import { NavLink } from "react-router-dom";
+import Logincontext from "../Context/Logincontext";
+
 
 function Header() {
 
+  const {user}=useContext(Logincontext)
+
+
   return (
-    <>
       <header className=" bg-blue-400">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -20,7 +24,7 @@ function Header() {
               />
             </NavLink>
             <h1 className=" m-2 font-bold">Bookstore</h1>
-            <h2 className=" m-2 font-bold">Hello,</h2>
+            <h2 className=" m-2 font-bold">Hello,{user}</h2>
           </div>
 
           <div className="hidden lg:flex lg:gap-x-12">
@@ -46,7 +50,6 @@ function Header() {
           </div>
         </nav>
       </header>
-    </>
   );
 }
 

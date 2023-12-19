@@ -5,9 +5,10 @@ import Cards from "./Components/Cards"
 import Footer from './Components/Footer'
 
 
+
 function Layout() {
   return (
-    <>
+<>
     <Header/>
     <Outlet/>
     <Cards/>

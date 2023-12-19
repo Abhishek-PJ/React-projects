@@ -5,6 +5,7 @@ import Layout from './Layout.jsx'
 import Login from "./Pages/Login.jsx"
 import Categories from "./Pages/Categories.jsx"
 import './index.css'
+
 import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
 
 
@@ -25,5 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <RouterProvider router={router}></RouterProvider>
         </React.StrictMode>
+      
     
 )

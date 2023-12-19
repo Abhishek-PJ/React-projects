@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
-
+//Login.js
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Logincontext from '../Context/Logincontext';
 
 const Login = () => {
-  const [username, setUsername] = useState('Abhishek');
-  const [password, setPassword] = useState('4555');
-  const navigate=useNavigate();
-     
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const { setuser } = useContext(Logincontext);
+  const navigate = useNavigate();
 
-  const handleLogin = () =>{
-    if(username=="" || password==""){
-      alert("Enter correct details")
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (username === '' || password === '') {
+      alert('Enter correct details');
+    } else {
+      setuser(username);
+      navigate('/home');
     }
-    else{
-    
-    navigate("/home")}
-  }
+  };
 
   return (
-    
-
-
     <div className="flex h-screen items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md w-96">
+        {/* The rest of your component */}
         <h2 className="text-2xl font-bold mb-6">Login</h2>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -56,9 +57,8 @@ const Login = () => {
         </button>
       </div>
     </div>
-
-
   );
 };
 
 export default Login;
+

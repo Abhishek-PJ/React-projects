@@ -1,12 +1,16 @@
-
+import Layout from "./Layout";
+import Login from "./Pages/Login";
+import Logincontextprovider from "./Context/Logincontextprovider";
 
 
 function App() {
 
   return (
-    <>
-     <h1>Hello</h1>
-    </>
+   <Logincontextprovider >
+    <Layout/>
+    <Login/>
+    </Logincontextprovider>
+
   );
 }
 
